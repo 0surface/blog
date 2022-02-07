@@ -2,6 +2,7 @@ import { useState } from 'react'
 import classes from './contact-form.module.css'
 
 function ContactForm() {
+  const [isInvalid, setisInvalid] = useState(false)
   const [enteredEmail, setEnteredEmail] = useState('')
   const [enteredName, setEnteredName] = useState('')
   const [enteredMessage, setEnteredMessage] = useState('')
@@ -9,7 +10,17 @@ function ContactForm() {
   function sendMessageHandler(event) {
     event.preventDefault()
 
-    //add client side validation
+    if (
+      !enteredEmail ||
+      !enteredEmail.includes('@') ||
+      !enteredName ||
+      enteredName.trim() === '' ||
+      !enteredMessage ||
+      enteredMessages.trim() === ''
+    ) {
+      setisInvalid(true)
+      return
+    }
 
     fetch('/api/contact', {
       method: 'POST',
@@ -66,6 +77,7 @@ function ContactForm() {
           <button>Send Message</button>
         </div>
       </form>
+      {isInvalid && <p>Please enter valid email, name or message</p>}
     </section>
   )
 }
