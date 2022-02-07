@@ -22,6 +22,8 @@ function ContactForm() {
         'Content-Type': 'application/json',
       },
     })
+      .then((response) => response.json())
+      .then((data) => {})
   }
 
   return (
