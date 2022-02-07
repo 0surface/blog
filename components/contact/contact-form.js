@@ -62,6 +62,9 @@ function ContactForm() {
         message: enteredMessage,
       })
       setRequestStatus('success')
+      setEnteredEmail('')
+      setEnteredName('')
+      setEnteredMessage('')
     } catch (err) {
       setRequestStatus('error')
       setRequestError(err.message)
