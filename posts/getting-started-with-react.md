@@ -2,7 +2,7 @@
 title: 'Getting started with React'
 date: '2022-03-28'
 image: getting-started-react.png
-excerpt: 'Raect is a javascript front end library - it makes building the UI of apps and sites a breeze and comes with an ecosystem of rich supplementary libraries'
+excerpt: 'React is a javascript front end library - it makes building the UI of apps and sites a breeze and comes with an ecosystem of rich supplementary libraries'
 isFeatured: false
 ---
 
