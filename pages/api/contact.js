@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb'
 
-const { MONGO_URI } = process.env
+const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.jkpu3.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
 
 async function handler(req, res) {
   if (req.method === 'POST') {
@@ -27,7 +27,7 @@ async function handler(req, res) {
     let client
 
     try {
-      client = await MongoClient.connect(MONGO_URI)
+      client = await MongoClient.connect(connectionString)
     } catch (error) {
       res.status(500).json({ message: 'Could not connect to database' })
       return
