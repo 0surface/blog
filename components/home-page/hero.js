@@ -15,8 +15,8 @@ function Hero(props) {
       </div>
       <h1>Welcome</h1>
       <p>
-        I blog about Blockchain - especially the Ethereum ecosystem, explore new
-        ideas and smart contract development
+        I blog about Development - especially the Ethereum ecosystem, explore
+        new ideas and smart contract development
       </p>
     </section>
   )
