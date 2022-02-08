@@ -18,11 +18,9 @@ function HomePage(props) {
 }
 
 export function getStaticProps(props) {
-  const featuredPosts = getFeaturedPosts()
-
   return {
     props: {
-      posts: featuredPosts,
+      posts: getFeaturedPosts(),
     },
   }
 }
