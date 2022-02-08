@@ -13,7 +13,7 @@ function Hero(props) {
           height={300}
         />
       </div>
-      <h1>Hi I am Si</h1>
+      <h1>Welcome</h1>
       <p>
         I blog about Blockchain - especially the Ethereum ecosystem, explore new
         ideas and smart contract development
