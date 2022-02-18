@@ -7,6 +7,7 @@ import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css'
 import ReactMarkdown from 'react-markdown'
 import PostHeader from './post-header'
 import classes from './post-content.module.css'
+import ScrollProgressBar from '../../components/ui/scroll-progress-bar'
 
 SyntaxHighlighter.registerLanguage('js', js)
 SyntaxHighlighter.registerLanguage('css', css)
@@ -50,6 +51,7 @@ function PostContent(props) {
 
   return (
     <article className={classes.content}>
+      <ScrollProgressBar />
       <PostHeader title={post.title} image={imagePath} />
       <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
     </article>
