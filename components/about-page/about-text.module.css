@@ -1,9 +1,35 @@
 .about {
+  /* background: white; */
+  min-height: 80vh;
+  width: 100%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(243, 237, 237, 0.8),
+    rgba(71, 70, 70, 0.1)
+  );
+  border-radius: 2%;
+  display: flex;
+}
+
+.portfolio {
+  text-align: center;
+  flex: 3;
+}
+
+.excerpt {
   text-align: center;
 }
 
+.dashboard {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .about p {
-  font-size: var(--size-6);
+  font-size: var(--size-4);
   color: var(--color-grey-900);
   width: 90%;
   text-align: justify;
@@ -12,8 +38,8 @@
 }
 
 .image {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   overflow: hidden;
